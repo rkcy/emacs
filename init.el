@@ -47,7 +47,7 @@
 ;; install use-package end
 
 ;; use this theme 
-(load-theme 'spacemacs-dark)
+(load-theme 'misterioso)
 
 ;; autocomplete company
 (use-package company
