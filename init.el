@@ -73,7 +73,17 @@
   :bind ("C-x g" . magit-status))
 ;; magit-end
 
+;; smartparens
+(use-package smartparens
+  :ensure t
+  :init
+  (smartparens-global-mode))
+;; smartparens end
 
+;; json start
+(use-package json-mode
+  :ensure t)
+;; json end
 
 ;; ocaml begin
 (and (require 'cl-lib)
@@ -122,7 +132,7 @@
   :init
   (projectile-mode +1)
   :bind (:map projectile-mode-map
-              ("C-p" . projectile-command-map)
+              ("C-x p" . projectile-command-map)
               ("C-p p" . projectile-command-map)))
 ;; projectile end
 
