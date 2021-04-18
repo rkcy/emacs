@@ -53,7 +53,12 @@
   )
 
 ;; theme 
-(load-theme 'misterioso)
+;;(load-theme 'misterioso)
+(use-package jetbrains-darcula-theme
+  :ensure t
+  :config
+  (load-theme 'jetbrains-darcula t))
+;; theme end
 
 ;; autocomplete company
 (use-package company
@@ -125,6 +130,15 @@
        :hook ((reason-mode tuareg-mode caml-mode) . merlin-eldoc-setup))
 ;; ocaml end
 
+;;coq start
+(use-package proof-general
+  :ensure t
+  :config
+  (use-package company-coq
+    :ensure t
+    :config
+    (add-hook 'coq-mod-hook #'company-coq-mod)))
+;; coq end
 
 ;; projectile start
 (use-package projectile
@@ -135,4 +149,5 @@
               ("C-x p" . projectile-command-map)
               ("C-p p" . projectile-command-map)))
 ;; projectile end
+
 
