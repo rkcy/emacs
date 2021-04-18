@@ -30,7 +30,7 @@
 
 ;; emacs custom files locations
 (setq backup-directory-alist `(("." . "~/.saves")))
-(setq custom-file "/home/rakesh/emacs/custom-file.el")
+(setq custom-file "~/emacs/custom-file.el")
 ;; emacs custom files end
 
 ;; require and initialize package
