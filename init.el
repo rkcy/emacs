@@ -7,6 +7,7 @@
   (select-frame-set-input-focus (selected-frame)))
 (add-hook 'server-after-make-frame-hook #'my/focus-new-client-frame)
 (setq inhibit-x-resources 't)
+(add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
 ;; emacs-client end
 
 
