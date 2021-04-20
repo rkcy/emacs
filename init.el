@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/emacs/")
+(add-to-list 'load-path "~/emacs/elegant")
 (load "custom-file")
+(require 'elegance)
+(require 'sanity)
 
 ;; emacs-client start
 (setq default-frame-alist '((cursor-color . "#FF00CD")))
@@ -7,7 +10,7 @@
   (select-frame-set-input-focus (selected-frame)))
 (add-hook 'server-after-make-frame-hook #'my/focus-new-client-frame)
 (setq inhibit-x-resources 't)
-(add-to-list 'default-frame-alist '(font . "Cascadia Mono-12"))
+(add-to-list 'default-frame-alist '(font . "Roboto Mono-13"))
 ;; emacs-client end
 
 
@@ -58,7 +61,8 @@
 (use-package jetbrains-darcula-theme
   :ensure t
   :config
-  (load-theme 'jetbrains-darcula t))
+  ;;(load-theme 'jetbrains-darcula t)
+  )
 ;; theme end
 
 ;; autocomplete company
