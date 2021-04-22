@@ -25,6 +25,7 @@
 (scroll-bar-mode -1)
 (line-number-mode t)
 (show-paren-mode 1)
+(delete-selection-mode 1)
 ;; emacs startup end
 
 ;; use `command` as `meta` in macOS.
@@ -155,4 +156,5 @@
               ("C-p p" . projectile-command-map)))
 ;; projectile end
 
-
+(use-package vterm
+    :ensure t)
