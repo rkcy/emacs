@@ -5,7 +5,7 @@
 (require 'sanity)
 
 ;; emacs-client start
-(setq default-frame-alist '((cursor-color . "#FF00CD")))
+;;(setq default-frame-alist '((cursor-color . "#FF00CD")))
 (defun my/focus-new-client-frame ()
   (select-frame-set-input-focus (selected-frame)))
 (add-hook 'server-after-make-frame-hook #'my/focus-new-client-frame)

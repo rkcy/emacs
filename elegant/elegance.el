@@ -51,7 +51,7 @@
 (setq widget-image-enable nil)
 
 ;; Line cursor and no blink
-(set-default 'cursor-type  '(bar . 1))
+(set-default 'cursor-type  'box)
 (blink-cursor-mode 0)
 
 ;; No sound
