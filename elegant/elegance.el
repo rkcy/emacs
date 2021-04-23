@@ -679,5 +679,4 @@ function is a convenience wrapper used by `describe-package-1'."
   (set-face 'mu4e-view-body-face                             'default)
   (set-face 'mu4e-warning-face                            'face-faded))
 
-(elegance-light)
 (provide 'elegance)
