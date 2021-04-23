@@ -295,10 +295,9 @@ background color that is barely perceptible."
     (with-eval-after-load 'cus-edit (set-button-faces)))
 
 (defun elegance-misterioso ()
-
-      (setq frame-background-mode 'dark)
+    (setq frame-background-mode 'dark)
     (set-background-color "#2d3743")
-    (set-foreground-color "#e1e1e0")
+    (set-foreground-color "#e1e2e0")
     (set-face-attribute 'default nil
                         :foreground (face-foreground 'default)
                         :background (face-background 'default))
@@ -308,16 +307,56 @@ background color that is barely perceptible."
     (set-face-attribute 'highlight nil
                       :foreground "#e1e1e0"
                       :background "#338f86")
+    (set-face-attribute 'region nil
+                      :foreground "#e1e1e0"
+                      :background "#2d4948")
+    (set-face-attribute 'isearch nil
+                      :foreground "#000000"
+                      :background "#fcffad")
+    (set-face-attribute 'lazy-highlight nil
+                      :background "#338f86")
+    (set-face-attribute 'trailing-whitespace nil
+                       :background "#ff4242")
+    (set-face-attribute 'mode-line nil
+                       :background "#212931"
+                       :foreground "#eeeeec")
+    (set-face-attribute 'mode-line-inactive nil
+                       :background "#878787"
+                       :foreground "#eeeeec")
+    (set-face-attribute 'minibuffer-prompt nil
+                       :foreground "#729fcf"
+                       :weight 'bold)
 
+    (set-face-attribute 'font-lock-builtin-face nil
+                      :foreground "#23d7d7")
+    (set-face-attribute 'font-lock-constant-face nil
+                      :foreground "#008b8b")
+    (set-face-attribute 'font-lock-function-name-face nil
+                      :foreground "#00ede1"
+                      :weight 'bold)    
     (set-face-attribute 'font-lock-keyword-face nil
                       :foreground "#ffad29"
                       :weight 'bold)
     (set-face-attribute 'font-lock-comment-face nil
-                      :foreground "#74af68")
+                        :foreground "#65737e")
+    (set-face-attribute 'font-lock-type-face nil
+                      :foreground "#34cae2")    
     (set-face-attribute 'font-lock-string-face nil
-                      :foreground "#e67128")
+                      :foreground "#74af68") 
     (set-face-attribute 'font-lock-variable-name-face nil
-                      :foreground "#dbdb95")
+                        :foreground "#dbdb95")
+    (set-face-attribute 'font-lock-warning-face nil
+                        :foreground "#ff4242"
+                        :weight 'bold)
+    (set-face-attribute 'button nil
+                        :underline t)
+    (set-face-attribute 'link nil
+                        :foreground "#59e9ff"
+                        :underline t)
+    (set-face-attribute 'link-visited nil
+                        :foreground "#ed74cd"
+                        :underline t)
+  
     (set-face-attribute 'face-critical nil :foreground "#385f38"
                                            :background "#f8f893")
     (set-face-attribute 'face-popout nil :foreground "#f0dfaf")
@@ -330,31 +369,12 @@ background color that is barely perceptible."
     (set-face-attribute 'face-subtle nil :background "#4f4f4f")
     (set-modeline-faces)
     (with-eval-after-load 'cus-edit (set-button-faces))
-  
-   ;; Ensure sufficient contrast on 256-color xterms.
-   ;;`(default ((((class color) (min-colors 4096))
-;;	       (:background "#2d3743" :foreground "#e1e1e0"))))
-   ;;`(cursor ((,class (:background "#415160"))))
-   ;; Highlighting faces
-   ;;`(fringe ((,class (:background "#2e3748"))))
-   ;;`(highlight ((,class (:background "#338f86" :foreground "#e1e1e0"))))
-   ;;`(region ((,class (:background "#2d4948" :foreground "#e1e1e0"))))
-   ;;`(isearch ((,class (:background "#fcffad" :foreground "#000000"))))
-   ;;`(lazy-highlight ((,class (:background "#338f86"))))
-   ;;`(trailing-whitespace ((,class (:background "#ff4242"))))
-   ;; Mode line faces
-   ;;`(mode-line ((,class (:background "#212931" :foreground "#eeeeec"))))
-   ;;`(mode-line-inactive
-    ;; ((,class (:background "#878787" :foreground "#eeeeec"))))
-   ;;`(header-line ((,class (:background "#e5e5e5" :foreground "#333333"))))
-   ;; Escape and prompt faces
-
   )
 
 ;; Set theme
-(elegance-misterioso)
+;;(elegance-misterioso)
 
-;; Structural
+;; Structural 
 (set-face 'bold                                          'face-strong)
 (set-face 'italic                                         'face-faded)
 (set-face 'bold-italic                                   'face-strong)
@@ -399,6 +419,7 @@ background color that is barely perceptible."
 ;; Documentation
 (with-eval-after-load 'info
   (set-face 'info-menu-header                            'face-strong)
+
   (set-face 'info-header-node                            'face-normal)
   (set-face 'Info-quoted                                  'face-faded)
   (set-face 'info-title-1                                'face-strong)
@@ -422,7 +443,8 @@ background color that is barely perceptible."
   (set-face 'message-header-to                          'face-salient)
   (set-face 'message-header-xheader                          'default)
   (set-face 'message-mml                                 'face-popout)
-  (set-face 'message-separator                           'face-faded))
+  (set-face 'message-separator                           'face-faded)
+  )
 
 ;; Outline
 (with-eval-after-load 'outline
@@ -657,4 +679,5 @@ function is a convenience wrapper used by `describe-package-1'."
   (set-face 'mu4e-view-body-face                             'default)
   (set-face 'mu4e-warning-face                            'face-faded))
 
+(elegance-light)
 (provide 'elegance)
