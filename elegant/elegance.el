@@ -294,8 +294,65 @@ background color that is barely perceptible."
     (set-modeline-faces)
     (with-eval-after-load 'cus-edit (set-button-faces)))
 
+(defun elegance-misterioso ()
+
+      (setq frame-background-mode 'dark)
+    (set-background-color "#2d3743")
+    (set-foreground-color "#e1e1e0")
+    (set-face-attribute 'default nil
+                        :foreground (face-foreground 'default)
+                        :background (face-background 'default))
+    (set-face-attribute 'fringe nil
+                      :foreground (face-foreground 'default)
+                      :background "#2e3748")
+    (set-face-attribute 'highlight nil
+                      :foreground "#e1e1e0"
+                      :background "#338f86")
+
+    (set-face-attribute 'font-lock-keyword-face nil
+                      :foreground "#ffad29"
+                      :weight 'bold)
+    (set-face-attribute 'font-lock-comment-face nil
+                      :foreground "#74af68")
+    (set-face-attribute 'font-lock-string-face nil
+                      :foreground "#e67128")
+    (set-face-attribute 'font-lock-variable-name-face nil
+                      :foreground "#dbdb95")
+    (set-face-attribute 'face-critical nil :foreground "#385f38"
+                                           :background "#f8f893")
+    (set-face-attribute 'face-popout nil :foreground "#f0dfaf")
+    (set-face-attribute 'face-strong nil :foreground "#dcdccc"
+                                         :weight 'regular)
+    (set-face-attribute 'face-salient nil :foreground "#dca3a3"
+                                          :weight 'light)
+    (set-face-attribute 'face-faded nil :foreground "#777767"
+                                        :weight 'light)
+    (set-face-attribute 'face-subtle nil :background "#4f4f4f")
+    (set-modeline-faces)
+    (with-eval-after-load 'cus-edit (set-button-faces))
+  
+   ;; Ensure sufficient contrast on 256-color xterms.
+   ;;`(default ((((class color) (min-colors 4096))
+;;	       (:background "#2d3743" :foreground "#e1e1e0"))))
+   ;;`(cursor ((,class (:background "#415160"))))
+   ;; Highlighting faces
+   ;;`(fringe ((,class (:background "#2e3748"))))
+   ;;`(highlight ((,class (:background "#338f86" :foreground "#e1e1e0"))))
+   ;;`(region ((,class (:background "#2d4948" :foreground "#e1e1e0"))))
+   ;;`(isearch ((,class (:background "#fcffad" :foreground "#000000"))))
+   ;;`(lazy-highlight ((,class (:background "#338f86"))))
+   ;;`(trailing-whitespace ((,class (:background "#ff4242"))))
+   ;; Mode line faces
+   ;;`(mode-line ((,class (:background "#212931" :foreground "#eeeeec"))))
+   ;;`(mode-line-inactive
+    ;; ((,class (:background "#878787" :foreground "#eeeeec"))))
+   ;;`(header-line ((,class (:background "#e5e5e5" :foreground "#333333"))))
+   ;; Escape and prompt faces
+
+  )
+
 ;; Set theme
-(elegance-light)
+(elegance-misterioso)
 
 ;; Structural
 (set-face 'bold                                          'face-strong)
@@ -328,16 +385,16 @@ background color that is barely perceptible."
 (set-face-attribute 'tooltip nil                         :height 0.85)
 
 ;; Programmation mode
-(set-face 'font-lock-comment-face                         'face-faded)
-(set-face 'font-lock-doc-face                             'face-faded)
-(set-face 'font-lock-string-face                         'face-popout)
-(set-face 'font-lock-constant-face                      'face-salient)
-(set-face 'font-lock-warning-face                        'face-popout)
-(set-face 'font-lock-function-name-face                  'face-strong)
-(set-face 'font-lock-variable-name-face                  'face-strong)
-(set-face 'font-lock-builtin-face                       'face-salient)
-(set-face 'font-lock-type-face                          'face-salient)
-(set-face 'font-lock-keyword-face                       'face-salient)
+;;(set-face 'font-lock-comment-face                         'face-faded)
+;;(set-face 'font-lock-doc-face                             'face-faded)
+;;(set-face 'font-lock-string-face                         'face-popout)
+;;(set-face 'font-lock-constant-face                      'face-salient)
+;;(set-face 'font-lock-warning-face                        'face-popout)
+;;(set-face 'font-lock-function-name-face                  'face-strong)
+;;(set-face 'font-lock-variable-name-face                  'face-strong)
+;;(set-face 'font-lock-builtin-face                       'face-salient)
+;;(set-face 'font-lock-type-face                          'face-salient)
+;;(set-face 'font-lock-keyword-face                       'face-salient)
 
 ;; Documentation
 (with-eval-after-load 'info
