@@ -158,6 +158,19 @@
 ;; projectile end
 
 (use-package vterm
-    :ensure t)
+  :ensure t)
+
+;;selectrum start
+(use-package selectrum
+  :ensure t
+  :init
+  (selectrum-mode +1)
+  :config
+  (use-package selectrum-prescient
+    :ensure t
+    :init
+    (selectrum-prescient-mode +1)
+    (prescient-persist-mode +1)))
+;;selectrum end
 
 
