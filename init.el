@@ -154,7 +154,8 @@
   (projectile-mode +1)
   :bind (:map projectile-mode-map
               ("C-x p" . projectile-command-map)
-             ;; ("C-p p" . projectile-command-map)))
+              ;; ("C-p p" . projectile-command-map)
+              ))
 ;; projectile end
 
 (use-package vterm
