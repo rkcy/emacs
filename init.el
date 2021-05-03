@@ -27,6 +27,7 @@
 (line-number-mode t)
 (show-paren-mode 1)
 (delete-selection-mode 1)
+(global-set-key (kbd "M-o") 'other-window)
 ;; emacs startup end
 
 ;; use `command` as `meta` in macOS.
