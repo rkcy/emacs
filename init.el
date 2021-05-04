@@ -28,6 +28,7 @@
 (show-paren-mode 1)
 (delete-selection-mode 1)
 (global-set-key (kbd "M-o") 'other-window)
+(setq overlay-arrow-string "") ;;arrow line in proof general
 ;; emacs startup end
 
 ;; use `command` as `meta` in macOS.
