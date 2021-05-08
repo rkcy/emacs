@@ -160,9 +160,6 @@
               ))
 ;; projectile end
 
-(use-package vterm
-  :ensure t)
-
 ;;selectrum start
 (use-package selectrum
   :ensure t
