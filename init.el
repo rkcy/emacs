@@ -27,6 +27,7 @@
 (line-number-mode t)
 (show-paren-mode 1)
 (delete-selection-mode 1)
+(set-face-attribute 'region nil :background "#008080")
 (global-set-key (kbd "M-o") 'other-window)
 (setq overlay-arrow-string "") ;;arrow line in proof general
 (global-set-key (kbd "C-M-d") 'down-list)
