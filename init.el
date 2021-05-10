@@ -29,6 +29,8 @@
 (delete-selection-mode 1)
 (global-set-key (kbd "M-o") 'other-window)
 (setq overlay-arrow-string "") ;;arrow line in proof general
+(global-set-key (kbd "C-M-d") 'down-list)
+(global-set-key (kbd "C-M--") 'scroll-other-window-down)
 ;; emacs startup end
 
 ;; use `command` as `meta` in macOS.
