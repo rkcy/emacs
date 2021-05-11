@@ -155,13 +155,10 @@
 ;; projectile start
 (use-package projectile
   :ensure t
-  :init
-  (projectile-mode +1)
-  :bind (:map projectile-mode-map
-              ("C-x p" . projectile-command-map)
-              ;; ("C-p p" . projectile-command-map)
-              ))
-;; projectile end
+  :config
+  (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+  (projectile-mode +1))
+;; PROJECTILE end
 
 ;;selectrum start
 (use-package selectrum
