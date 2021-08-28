@@ -174,3 +174,56 @@
 ;;selectrum end
 
 
+;; html, json, js and css begin
+(use-package web-mode
+  :ensure t
+  :mode ("\\.html$" . web-mode)
+  :init
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq js-indent-level 2)
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-expanding t)
+  (setq web-mode-enable-css-colorization t)
+  (add-hook 'web-mode-hook 'electric-pair-mode))
+
+(use-package web-beautify
+  :ensure t
+  :commands (web-beautify-css
+             web-beautify-css-buffer
+             web-beautify-html
+             web-beautify-html-buffer
+             web-beautify-js
+             web-beautify-js-buffer))
+
+(use-package emmet-mode
+  :ensure t
+  :diminish (emmet-mode . "ε")
+  :bind* (("C-)" . emmet-next-edit-point)
+          ("C-(" . emmet-prev-edit-point))
+  :commands (emmet-mode
+             emmet-next-edit-point
+             emmet-prev-edit-point)
+  :init
+  (setq emmet-indentation 2)
+  (setq emmet-move-cursor-between-quotes t)
+  :config
+  ;; Auto-start on any markup modes
+  (add-hook 'sgml-mode-hook 'emmet-mode)
+  (add-hook 'web-mode-hook 'emmet-mode))
+
+
+(use-package nginx-mode
+  :ensure t
+  :commands (nginx-mode))
+
+(use-package json-mode
+  :ensure t
+  :mode "\\.json\\'"
+  :config
+  (bind-key "{" #'paredit-open-curly json-mode-map)
+  (bind-key "}" #'paredit-close-curly json-mode-map))
+;; html, json, js and css end
+
+
