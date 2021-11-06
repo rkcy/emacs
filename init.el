@@ -227,3 +227,7 @@
 ;; html, json, js and css end
 
 
+(use-package bazel
+  :ensure t
+  )
+
