@@ -97,6 +97,13 @@
   (smartparens-global-mode))
 ;; smartparens end
 
+;;disable mouse
+(use-package disable-mouse
+  :ensure t
+  :init
+  (global-disable-mouse-mode))
+;;disable mouse end
+
 ;; json start
 (use-package json-mode
   :ensure t)
