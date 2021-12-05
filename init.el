@@ -88,10 +88,11 @@
 ;; smartparens end
 
 ;;disable mouse
-(use-package disable-mouse
-  :ensure t
-  :init
-  (global-disable-mouse-mode))
+;;(use-package disable-mouse
+;;  :ensure t
+;;  :init
+(global-set-key [S-down-mouse-1] nil)
+;;  (global-disable-mouse-mode))
 ;;disable mouse end
 
 ;; json start
